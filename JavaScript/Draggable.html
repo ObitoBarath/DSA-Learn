@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Div</title>
+    <style>
+        #draggable {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+<div id="draggable">Drag me</div>
+
+<script>
+    const draggable = document.getElementById('draggable');
+
+    let isDragging = false; // To track the drag state
+    let offsetX, offsetY;   // To store the mouse offset relative to the div
+
+    // Mouse down event: Start dragging
+    draggable.addEventListener('mousedown', (event) => {
+
+        isDragging = true;
+
+        // Calculate the offset of the mouse inside the div
+        offsetX = event.clientX - draggable.offsetLeft;
+        offsetY = event.clientY - draggable.offsetTop;
+
+        // Change cursor style for dragging
+        draggable.style.cursor = 'grabbing';
+    });
+
+    // Mouse move event: Drag the div
+    document.addEventListener('mousemove', (event) => {
+
+        if (!isDragging) return;
+
+        // Update the position of the div
+        const x = event.clientX - offsetX;
+        const y = event.clientY - offsetY;
+
+        draggable.style.left = `${x}px`;
+        draggable.style.top = `${y}px`;
+    });
+
+    // Mouse up event: Stop dragging
+    document.addEventListener('mouseup', () => {
+        console.log("mouse up")
+
+        isDragging = false;
+
+        // Reset cursor style
+        draggable.style.cursor = 'grab';
+    });
+</script>
+</body>
+</html>

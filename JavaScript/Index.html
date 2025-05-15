@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interview Question</title>
+    <script src="./Index.js"></script>
+    <style>
+
+        body{
+            height: 200vh;
+        }
+
+    </style>
+</head>
+<body>
+<input id="search" >
+</body>
+<script>
+    const object  = {
+        a : {
+            a : {
+                a : "A"
+            }
+        },
+        b : {
+            b : {
+                b:"B"
+            }
+        }
+    }
+
+
+    const clonedObject = {...object}
+
+    clonedObject.a = "V"
+
+    console.log("clonedObject ==>" ,clonedObject)
+    console.log("object==>" ,object)
+
+
+
+</script>
+</html>
