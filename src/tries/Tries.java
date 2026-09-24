@@ -204,6 +204,6 @@ class MyClass extends MainTries {
     }
     MyClass(String str){
         System.out.println("str =" +str);
-        this();
+//        this();
     }
 }

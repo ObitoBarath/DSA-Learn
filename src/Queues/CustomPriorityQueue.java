@@ -36,16 +36,16 @@ public class CustomPriorityQueue {
     }
 
 
-
-    public int deQueue(){
-        if (priorityQueueNodes.isEmpty()){
-            throw new NoSuchElementException() ;
-        }
-        return priorityQueueNodes.removeFirst().data;
-    }
-    public int peek(){
-        return priorityQueueNodes.getFirst().data;
-    }
+//
+//    public int deQueue(){
+//        if (priorityQueueNodes.isEmpty()){
+//            throw new NoSuchElementException() ;
+//        }
+//        return priorityQueueNodes.removeFirst().data;
+//    }
+//    public int peek(){
+//        return priorityQueueNodes.getFirst().data;
+//    }
 
 
 

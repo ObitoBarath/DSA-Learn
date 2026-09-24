@@ -7,6 +7,16 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        try{
+            if (Boolean.TRUE){
+                throw new RuntimeException();
+            }
+        }catch (Exception e ){
+
+            e.printStackTrace();
+        }
+
 //    1) length of the longest sub string
         /*int i = lengthOfLongestSubstring("pwwkew");
         System.out.println("i = " + i);*/

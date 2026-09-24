@@ -112,7 +112,7 @@ public class Sorting {
         int[] array = {9, 8, 7, 6, 5, 4, 3, 2, 1};
         splittingIntoHalf(array);
 //        mergeSort(array);
-        System.out.println(STR."Arrays.toString(array) = \{Arrays.toString(array)}");
+//        System.out.println(STR."Arrays.toString(array) = \{Arrays.toString(array)}");
     }
 
     public void splittingIntoHalf(int[] array) {

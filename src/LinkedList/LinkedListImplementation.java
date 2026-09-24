@@ -109,7 +109,7 @@ public class LinkedListImplementation implements LinkedListAPI {
         SinglyNode temp = head;
         System.out.print("[ ");
         while (temp != null){
-            System.out.print(STR."\{temp.data}");
+//            System.out.print(STR."\{temp.data}");
             temp = temp.next;
             System.out.print(",");
         }
